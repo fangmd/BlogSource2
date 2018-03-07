@@ -91,7 +91,20 @@ class App extends React.Component{
 
 ReactDOM.render(
   <Router >
+
   	<Route path='/' component={App}/>
+    
+
   </Router>,
   document.getElementById('app')
 );
+
+// ReactDOM.render(
+//   <Router >
+//     <Route path="/" component={App}>
+//       <Route path="about" component={About} />
+//       <Route path="blog" component={Blog} />
+//     </Route>
+//   </Router>,
+//   document.getElementById('app')
+// );
