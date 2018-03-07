@@ -1,0 +1,44 @@
+#backgroundimage {
+    height: auto;
+    left: 0;
+    margin: 0;
+    min-height: 100%;
+    min-width: 674px;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+
+.sidebar {
+    color: #fff;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    height: 600px;
+}
+
+.sidebar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.nav-item .pure-menu-link {
+    color: white;
+}
+
+.short-line {
+    width: 800px;
+    height: 1px;
+    margin-top: 10px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #fff;
+}

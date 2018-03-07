@@ -2,28 +2,50 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './sytles/pure-min.css'
 import './index.css';
+
 import About from './About';
 import Blog from './Blog';
 
-
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Switch } from 'react-router'
 
+var axios = require('axios');
 
+class App extends React.Component{
 
-class Home extends React.Component {
+	constructor(props){
+    super(props);
+    this.state = {
+    	source: "http://localhost:8000/v1/api/users/",
+			users: [],
+			date: new Date()
+    };
+	}
+
+	componentDidMount() {
+		var th = this;
+		this.serverRequest = axios.get(this.state.source)
+      .then(function(result) {
+      	console.log(result);
+        th.setState({
+        	source: "11",
+          
+        });
+      })
+  }
+
   render() {
     return (
       <div className="home" >
 
-      <img id="backgroundimage" src="/static/imgs/home-bg01.jpeg" border="0" alt=""/>
+      <img id="backgroundimage" src="/static/home-bg01.jpeg" border="0" alt=""/>
 
       <div>
 
       	<div class="profile">
 
       		<div class="sidebar">
-						<a href="#open"> <img src="/static/imgs/avatar.jpg" class="z-depth-4"/> </a>
+						<a href="#open"> <img src="/static/avatar.jpg"/> </a>
+
 						<p>FangMingDong</p>
 						<p>Android dev</p>
 
@@ -43,6 +65,16 @@ class Home extends React.Component {
               </ul>
             </div>
 
+            <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+
+            <h2>It is {this.state.users[0]}.</h2>
+
+            {this.state.users.map(function(user) {
+
+  						return  <div> user.username </div>;
+
+        		})}
+
 					</div>
 
       	</div>
@@ -57,24 +89,9 @@ class Home extends React.Component {
 // <Route path='/about' component={About}/>
 // <Route path='/blog' component={Blog}/>
 
-
 ReactDOM.render(
-	<Router >
-
-
-    <Route path='/' component={Home}/>
-
+  <Router >
+  	<Route path='/' component={App}/>
   </Router>,
-  document.getElementById('root')
+  document.getElementById('app')
 );
-
-
-
-
-
-
-
-
-
-
-
