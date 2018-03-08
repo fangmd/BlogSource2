@@ -1,1 +1,1 @@
-{"status":"done","chunks":{"main":[{"name":"main-6e723e1d121ff7b078bb.js","path":"/Users/double/Documents/BlogSource2/djangowebpack/assets/bundles/main-6e723e1d121ff7b078bb.js"}]}}
+{"status":"done","chunks":{"main":[{"name":"main-3d352f8ae26a6ff0d572.js","path":"/Users/nerc/Documents/fangmingdong/BlogSource2/djangowebpack/assets/bundles/main-3d352f8ae26a6ff0d572.js"}]},"error":"ModuleBuildError","message":"Module build failed: SyntaxError: Unexpected token (78:6)\n\n  76 | \n  77 | \n> 78 | \t\t\t\t\t</div>\n     | \t\t\t\t\t ^\n  79 | \n  80 |       \t</div>\n  81 | \n"}

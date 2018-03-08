@@ -1,5 +1,8 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+# webpack build file
+/assets/bubdles/*
+
 # dependencies
 /node_modules
 

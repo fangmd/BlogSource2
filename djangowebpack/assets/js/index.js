@@ -7,6 +7,7 @@ import About from './About';
 import Blog from './Blog';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Switch } from "react-router-dom";
 
 var axios = require('axios');
 
@@ -16,8 +17,8 @@ class App extends React.Component{
     super(props);
     this.state = {
     	source: "http://localhost:8000/v1/api/users/",
-			users: [],
-			date: new Date()
+      users:[],
+			date: new Date(),
     };
 	}
 
@@ -28,7 +29,7 @@ class App extends React.Component{
       	console.log(result);
         th.setState({
         	source: "11",
-          
+          users: result.data,
         });
       })
   }
@@ -65,15 +66,8 @@ class App extends React.Component{
               </ul>
             </div>
 
-            <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+            <p>{this.state.date.toLocaleTimeString()}</p>
 
-            <h2>It is {this.state.users[0]}.</h2>
-
-            {this.state.users.map(function(user) {
-
-  						return  <div> user.username </div>;
-
-        		})}
 
 					</div>
 
@@ -86,25 +80,18 @@ class App extends React.Component{
   }
 }
 
-// <Route path='/about' component={About}/>
-// <Route path='/blog' component={Blog}/>
+          // {this.state.users.map(user =>
+          //   <h2> {user.username} -- {user.url} </h2>
+          // )}
 
 ReactDOM.render(
   <Router >
 
-  	<Route path='/' component={App}/>
-    
-
+    <Switch>
+      <Route path='/about' component={About}/>
+      <Route path='/blog' component={Blog}/>
+      <Route path='/' component={App}/>
+    </Switch>
   </Router>,
   document.getElementById('app')
 );
-
-// ReactDOM.render(
-//   <Router >
-//     <Route path="/" component={App}>
-//       <Route path="about" component={About} />
-//       <Route path="blog" component={Blog} />
-//     </Route>
-//   </Router>,
-//   document.getElementById('app')
-// );
