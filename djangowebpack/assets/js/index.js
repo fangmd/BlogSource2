@@ -1,6 +1,10 @@
+import './sytles/pure-min.css';
+import './sytles/grids-responsive-min.css';
+import './sytles/base.css';
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './sytles/pure-min.css'
 import './index.css';
 
 import About from './About';
@@ -8,6 +12,9 @@ import Blog from './Blog';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router-dom";
+
+
+
 
 var axios = require('axios');
 
@@ -44,7 +51,7 @@ class App extends React.Component{
 
       	<div class="profile">
 
-      		<div class="sidebar">
+      		<div class="sidebar_index">
 						<a href="#open"> <img src="/static/avatar.jpg"/> </a>
 
 						<p>FangMingDong</p>

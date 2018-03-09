@@ -12,7 +12,7 @@
 }
 
 
-.sidebar {
+.sidebar_index {
     color: #fff;
     margin: auto;
 
@@ -24,7 +24,7 @@
     height: 600px;
 }
 
-.sidebar img {
+.sidebar_index img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
