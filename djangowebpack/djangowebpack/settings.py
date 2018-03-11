@@ -25,7 +25,7 @@ SECRET_KEY = '!nc__0$qbag2_7rg_*t^dp6y4#eaqz0(apr8_fh^uw4(uynsoo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -51,7 +51,8 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
 }
 
 MIDDLEWARE = [
@@ -91,9 +92,10 @@ WSGI_APPLICATION = 'djangowebpack.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': '/Users/double/Documents/BlogSource2/djangowebpack/db.sqlite3'
     }
 }
+# os.path.join(BASE_DIR, 'db.sqlite3'),
 
 
 # Password validation

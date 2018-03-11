@@ -1,13 +1,21 @@
+import './sytles/pure-min.css';
+import './sytles/grids-responsive-min.css';
+import './sytles/base.css';
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './sytles/pure-min.css'
 import './index.css';
 
 import About from './About';
 import Blog from './Blog';
+import Article from './Article';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router-dom";
+
+
+
 
 var axios = require('axios');
 
@@ -16,7 +24,7 @@ class App extends React.Component{
 	constructor(props){
     super(props);
     this.state = {
-    	source: "http://localhost:8000/v1/api/users/",
+    	source: "http://127.0.0.1:8000/v1/api/users/",
       users:[],
 			date: new Date(),
     };
@@ -44,8 +52,8 @@ class App extends React.Component{
 
       	<div class="profile">
 
-      		<div class="sidebar">
-						<a href="#open"> <img src="/static/avatar.jpg"/> </a>
+      		<div class="sidebar_index">
+						<a href="/"> <img src="/static/avatar.jpg"/> </a>
 
 						<p>FangMingDong</p>
 						<p>Android dev</p>
@@ -90,6 +98,8 @@ ReactDOM.render(
     <Switch>
       <Route path='/about' component={About}/>
       <Route path='/blog' component={Blog}/>
+      <Route path='/article/:id' component={Article}/>
+      
       <Route path='/' component={App}/>
     </Switch>
   </Router>,
