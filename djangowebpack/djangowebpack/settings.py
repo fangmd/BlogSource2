@@ -92,10 +92,11 @@ WSGI_APPLICATION = 'djangowebpack.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/Users/double/Documents/BlogSource2/djangowebpack/db.sqlite3'
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 # os.path.join(BASE_DIR, 'db.sqlite3'),
+# '/Users/double/Documents/BlogSource2/djangowebpack/db.sqlite3'
 
 
 # Password validation
