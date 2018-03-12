@@ -20,7 +20,70 @@ nav a {
     height: 100%
 }
 
-.pagination li,
-ul.nav li {
-    text-align: center
+
+.pagination {
+    background: 0 0;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    box-shadow: none;
+    display: flex!important;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+}
+
+.btn-flat.disabled, .btn-flat:disabled, .btn-flat[disabled], .btn-floating.disabled, .btn-floating:disabled, .btn-floating[disabled], .btn-large.disabled, .btn-large:disabled, .btn-large[disabled], .btn.disabled, .btn:disabled, .btn[disabled], .disabled.btn-large, [disabled].btn-large {
+    pointer-events: none;
+    background-color: #DFDFDF!important;
+    box-shadow: none;
+    color: #9F9F9F!important;
+    cursor: default;
+}
+
+.btn-floating {
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    transition: .3s;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.btn-floating i {
+    width: inherit;
+    display: inline-block;
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 40px;
+}
+
+.btn-floating, .btn-floating:hover {
+    background-color: #26a69a;
+}
+
+.btn, .btn-flat, .btn-floating, .btn-large {
+    font-size: 1rem;
+    outline: 0;
+}
+
+.btn-floating, .markdown-body svg:not(:root) {
+    overflow: hidden;
+}
+
+.btn-floating i {
+    text-align: center;
+}
+
+.waves-effect {
+    position: relative;
+}
+
+.red {
+    background-color: #F44336!important;
 }

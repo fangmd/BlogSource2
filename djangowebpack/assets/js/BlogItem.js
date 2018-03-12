@@ -12,6 +12,7 @@ class BlogItem extends React.Component{
 		return (
 			<div class="blog-item">
 
+
 				<a class="readmore" href={'/article/' + this.props.article.id}></a>
 
 				<div class="item-header">
@@ -19,7 +20,10 @@ class BlogItem extends React.Component{
 					<span><i class="fa fa-calendar"></i> {dateStr}</span>
 				</div>
 				<div class="item-content">
+					<p>
 					{this.props.article.body.substring(0, 600)}
+					</p>
+					
 				</div>
 
 			</div>

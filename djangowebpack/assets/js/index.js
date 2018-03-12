@@ -89,8 +89,8 @@ ReactDOM.render(
 
     <Switch>
       <Route path='/about' component={About}/>
-      <Route path='/blog/' component={Blog}/>
       <Route path='/blog/:id' component={Blog}/>
+      <Route path='/blog/' component={Blog}/>      
       <Route path='/article/:id' component={Article}/>
       <Route path='/' component={App}/>
     </Switch>
