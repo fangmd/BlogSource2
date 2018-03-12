@@ -55,8 +55,14 @@
     color: #333
 }
 
-.blog-header span {
+.item-header span {
     font-size: 12px;
     color: #999;
     letter-spacing: .5px
 }
+
+/*.blog-header span {
+    font-size: 12px;
+    color: #999;
+    letter-spacing: .5px
+}*/

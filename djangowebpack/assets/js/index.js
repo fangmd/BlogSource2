@@ -46,7 +46,7 @@ class App extends React.Component{
     return (
       <div className="home" >
 
-      <img id="backgroundimage" src="/static/home-bg01.jpeg" border="0" alt=""/>
+      <img id="backgroundimage" class="blur" src="/static/home-bg01.jpg" border="0" alt=""/>
 
       <div>
 
@@ -66,17 +66,6 @@ class App extends React.Component{
               </ul>
             </div>
 
-            <div class="short-line"></div>
-
-            <div>
-              <ul class="nav pure-menu pure-menu-horizontal pure-menu-list">
-                <li class="pure-menu-item nav-item"> <a href="/blog" class="pure-menu-link"> temp </a> </li>
-              </ul>
-            </div>
-
-            <p>{this.state.date.toLocaleTimeString()}</p>
-
-
 					</div>
 
       	</div>
@@ -88,18 +77,21 @@ class App extends React.Component{
   }
 }
 
-          // {this.state.users.map(user =>
-          //   <h2> {user.username} -- {user.url} </h2>
-          // )}
+// <div class="short-line"></div>
+            // <div>
+            //   <ul class="nav pure-menu pure-menu-horizontal pure-menu-list">
+            //     <li class="pure-menu-item nav-item"> <a href="/blog" class="pure-menu-link"> temp </a> </li>
+            //   </ul>
+            // </div>
 
 ReactDOM.render(
   <Router >
 
     <Switch>
       <Route path='/about' component={About}/>
-      <Route path='/blog' component={Blog}/>
+      <Route path='/blog/' component={Blog}/>
+      <Route path='/blog/:id' component={Blog}/>
       <Route path='/article/:id' component={Article}/>
-      
       <Route path='/' component={App}/>
     </Switch>
   </Router>,

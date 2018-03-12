@@ -1,15 +1,21 @@
 .sidebar {
     color: #fff;
-	background: rgb(61, 79, 93);
+	background: url('/static/home-bg02.jpg');
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin: 0;
 	height: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
 }
 
+.pure-u-md-1-4 {
+	width: 25%;
 
+}
 
 
 /*    margin: 0;

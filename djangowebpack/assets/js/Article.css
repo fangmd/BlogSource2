@@ -1,0 +1,42 @@
+.article-header .container {
+    background: transparent url('/static/article-bg01.jpg') 0 0 no-repeat fixed;
+    text-align: center;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg', sizingMethod='scale');
+
+    height: 500px;
+    width: 100%;
+    display: table;
+}
+
+.article-header-title {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 3em;
+    color: white;
+    font-weight: 500;
+    text-shadow: 0 1px 1px black;
+}
+
+.article-header-subtitle {
+    font-size: 0.4em;
+}
+
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+}
+
+.markdown-body span{
+    display: none
+}
+
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}

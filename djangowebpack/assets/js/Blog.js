@@ -13,14 +13,16 @@ class Blog extends React.Component{
 			<div class="blog pure-g">
 
 				<SideBar />
-				<BlogList />
+				<BlogList pageIndex = {this.props.match.params.id}/>
 
 			</div>
 		);
 	}
 }
 
-//pure-u-1 pure-u-md-1-4 pure-u-md-3-4
+// content
+//sideBar:pure-u-1 pure-u-md-1-4
+//BlogList: pure-u-1 pure-u-md-3-4
 
 //
 

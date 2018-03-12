@@ -11,11 +11,17 @@
     z-index: -1;
 }
 
+.blur {
+    -webkit-filter: blur(2px); /* Chrome, Opera */
+       -moz-filter: blur(2px);
+        -ms-filter: blur(2px);
+            filter: blur(2px);
+}
+
 
 .sidebar_index {
     color: #fff;
     margin: auto;
-
     display: flex;
     align-items: center;
     justify-content: center;
