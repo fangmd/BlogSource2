@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import SideBar from './SideBar';
+import SideBar2 from './SideBar2';
+
 import BlogList from './BlogList';
 
 import './Blog.css';
@@ -12,7 +15,7 @@ class Blog extends React.Component{
 		return(
 			<div class="blog pure-g">
 
-				<SideBar />
+				<SideBar2 />
 				<BlogList pageIndex = {this.props.match.params.id}/>
 
 			</div>

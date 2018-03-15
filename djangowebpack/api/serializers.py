@@ -12,3 +12,7 @@ class ArticleSerializer(serializers.HyperlinkedModelSerializer):
         model = Article
         fields = ('url', 'id', 'title', 'body', 'abstract', 'last_modified_time')
 
+class ArticleArchivesSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Article
+        fields = ('url', 'id', 'title', 'last_modified_time')

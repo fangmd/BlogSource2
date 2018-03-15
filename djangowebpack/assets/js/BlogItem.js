@@ -23,7 +23,7 @@ class BlogItem extends React.Component{
 					<p>
 					{this.props.article.body.substring(0, 600)}
 					</p>
-					
+
 				</div>
 
 			</div>

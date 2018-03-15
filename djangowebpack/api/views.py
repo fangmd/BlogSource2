@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework import viewsets
 from django.contrib.auth.models import User
-from api.serializers import UserSerializer, ArticleSerializer
+from api.serializers import UserSerializer, ArticleSerializer, ArticleArchivesSerializer
 from api.models import Article
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -13,3 +13,7 @@ class UserViewSet(viewsets.ModelViewSet):
 class ArticleViewSet(viewsets.ModelViewSet):
 	queryset = Article.objects.all()
 	serializer_class = ArticleSerializer
+
+class ArticleArchivesViewSet(viewsets.ModelViewSet):
+	queryset = Article.objects.all()
+	serializer_class = ArticleArchivesSerializer

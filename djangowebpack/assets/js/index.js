@@ -10,6 +10,7 @@ import './index.css';
 import About from './About';
 import Blog from './Blog';
 import Article from './Article';
+import Archives from './Archives';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router-dom";
@@ -89,8 +90,11 @@ ReactDOM.render(
 
     <Switch>
       <Route path='/about' component={About}/>
+      <Route path='/archives' component={Archives}/>
+
       <Route path='/blog/:id' component={Blog}/>
-      <Route path='/blog/' component={Blog}/>      
+      <Route path='/blog/' component={Blog}/>
+
       <Route path='/article/:id' component={Article}/>
       <Route path='/' component={App}/>
     </Switch>
