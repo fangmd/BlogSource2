@@ -18,10 +18,9 @@
             filter: blur(2px);
 }
 
-
-.sidebar_index {
+.home-profile {
     color: #fff;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,21 +29,41 @@
     height: 600px;
 }
 
-.sidebar_index img {
+.home-profile p{    
+    font-size: 20px;    
+}
+
+.home-profile .home-title{
+    margin-top: 16px;
+}
+
+.home-profile img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
 }
 
-.nav-item .pure-menu-link {
+.home-profile .home-subtitle{
+    font-size: 18px;
+}
+
+/*
+.home-profile:first-child{
+    margin-top: 10px;
+}*/
+
+.home-menu-item{
+    margin: 0 auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.home-menu-item a{
     color: white;
 }
 
 .short-line {
-    width: 800px;
+    width: 30%;
     height: 1px;
-    margin-top: 10px;
-    padding: 0px;
-    overflow: hidden;
-    background-color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, .34)
 }

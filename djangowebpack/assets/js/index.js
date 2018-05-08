@@ -1,5 +1,5 @@
-import './sytles/pure-min.css';
-import './sytles/grids-responsive-min.css';
+// import './sytles/pure-min.css';
+// import './sytles/grids-responsive-min.css';
 import './sytles/base.css';
 
 
@@ -16,6 +16,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router-dom";
 
 
+import CssLearn from './cssLearn/CssLearn';
 
 
 var axios = require('axios');
@@ -45,33 +46,28 @@ class App extends React.Component{
 
   render() {
     return (
-      <div className="home" >
+      <div class="container" >
 
-      <img id="backgroundimage" class="blur" src="/static/home-bg01.jpg" border="0" alt=""/>
+        <img id="backgroundimage" class="blur" src="/static/home-bg01.jpg" border="0" alt=""/>
 
-      <div>
+        	<div class="home-profile">
 
-      	<div class="profile">
+  						<a href="/"> <img src="/static/avatar.jpg"/> </a>
 
-      		<div class="sidebar_index">
-						<a href="/"> <img src="/static/avatar.jpg"/> </a>
+  						<p class="home-title">FangMingDong</p>
 
-						<p>FangMingDong</p>
-						<p>Android dev</p>
+  						<p class="home-subtitle">Android Developer / Java</p>
 
-            <div>
-              <ul class="nav pure-menu pure-menu-horizontal pure-menu-list">
-                <li class="pure-menu-item nav-item"> <a href="/blog" class="pure-menu-link"> Blog </a> </li>
-                <li class="nav-item pure-menu-item"> <a href="/about" class="pure-menu-link"> About </a> </li>
-                <li class="nav-item pure-menu-item"> <a href="/archives" class="pure-menu-link"> Archives </a> </li>
-              </ul>
-            </div>
+              <div class="short-line"/>
 
-					</div>
+              <p class="home-menu-item"><a href="/blog"> Blog </a></p>
+              <p class="home-menu-item"><a href="/about"> About </a></p>
+              <p class="home-menu-item"><a href="/archives"> Archives </a></p>
 
-      	</div>
+              <div class="short-line"/>
 
-      </div>
+
+        </div>
 
       </div>
     );
@@ -89,6 +85,8 @@ ReactDOM.render(
   <Router >
 
     <Switch>
+      <Route path='/csslearn' component={CssLearn}/>
+
       <Route path='/about' component={About}/>
       <Route path='/archives' component={Archives}/>
 
@@ -97,6 +95,8 @@ ReactDOM.render(
 
       <Route path='/article/:id' component={Article}/>
       <Route path='/' component={App}/>
+
+      
     </Switch>
   </Router>,
   document.getElementById('app')
